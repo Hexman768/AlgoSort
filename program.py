@@ -1,6 +1,6 @@
 import pygame, sys
 import random
-from BubbleSort import BubbleSort
+from HeapSort import HeapSort
 
 width = 800
 height = 500
@@ -19,7 +19,7 @@ def create_array():
 
 def main():
     array = create_array()
-    engine1 = BubbleSort(array, clock, screen, WHITE, BLACK)
+    engine1 = HeapSort(array, clock, screen, WHITE, BLACK)
 
     while True:
         for event in pygame.event.get():
