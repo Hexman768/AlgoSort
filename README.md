@@ -12,7 +12,7 @@ To run a visualizer, simply create a new instance of an engine object and create
 # Example
 Here is an example of creating a visualizer with the BubbleSort engine.
 
-```
+```python
 import pygame, sys
 import random
 from BubbleSort import BubbleSort
