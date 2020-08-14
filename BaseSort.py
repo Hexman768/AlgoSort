@@ -16,10 +16,17 @@ class BaseSort:
         self.screen.fill(self.back_color)
         self.draw_array()
 
-    def check_sort(self):
-        for i in self.array:
-            if (self.array[i] > self.array[i+1]):
-                return False
+    def check_sort(self, forward):
+        print("Checking")
+        if (forward):
+            for i in self.array:
+                if (self.array[i] > self.array[i+1]):
+                    return False
+        else:
+            for i in self.array:
+                if (self.array[i] < self.array[i+1]):
+                    return False
+        print("Sorted")
         return True
 
     def swap(self, a, b):

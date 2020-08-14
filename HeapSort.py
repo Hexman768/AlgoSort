@@ -13,12 +13,13 @@ class HeapSort(BaseSort):
         largest = i
         left = 2 * i + 1
         right = 2 * i + 2
-        if (left < n and self.array[i] < self.array[left]):
+        if (left < n and self.array[left] > self.array[largest]):
             largest = left
-        if (right < n and self.array[largest] < self.array[right]):
+        if (right < n and self.array[right] > self.array[largest]):
             largest = right
         if (largest != i):
-            self.swap(i, largest)
             swap = self.array[i]
+            self.array[i] = self.array[largest]
+            self.array[largest] = swap
             self.heapify(n, largest)
 

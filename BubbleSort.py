@@ -7,5 +7,5 @@ class BubbleSort(BaseSort):
             for i in range(len(self.array)-1):
                 if (self.array[i] > self.array[i+1]):
                     self.swap(i, i+1)
-            sorted = self.check_sort()
+            sorted = self.check_sort(True)
         return True
